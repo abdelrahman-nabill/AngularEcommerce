@@ -1,0 +1,17 @@
+<div class="container">
+  <app-loading *ngIf="orders==null"></app-loading>
+  <div *ngIf="orders!=null" class="">
+    <div *ngFor="let item of orders , let x = index" class="row my-4 border-bottom border-black border-3 ">
+      <div class="d-flex justify-content-between">
+      <h2 class="text-main fw-bold special-font">Order Number : {{x+1}}</h2>
+      <h2 class="text-main fw-bold special-font">Order Date : {{item.createdAt | date}}</h2>
+      <h2 class="text-main fw-bold special-font">Total Order Price : {{item.totalOrderPrice}} EGP</h2>
+
+      </div>
+      <div *ngFor="let list of item.cartItems" class="col-md-3">
+        <img [src]="list.product.imageCover" class="w-100" height="300" alt="">
+        <h6 class="fw-bold text-center text-main special-font">{{list.price}} EGP</h6>
+      </div>
+    </div>
+  </div>
+</div>

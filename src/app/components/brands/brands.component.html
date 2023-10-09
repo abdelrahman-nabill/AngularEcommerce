@@ -1,0 +1,22 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <app-loading *ngIf="brands==null"></app-loading>
+
+      <div *ngFor="let brand of brands" class="col-md-3 my-3">
+       <div *ngIf="brands!=null" class="cursor-pointer ">
+
+        <a [routerLink]="['/brands/'+brand._id]">
+          <div class="div overflow-hidden">
+            <img [src]="brand.image" class="w-100" height="250" alt="">
+          </div>
+          <h3 class="special-font text-main text-center fw-bold mt-2 ">{{brand.name}}</h3>
+
+        </a>
+       </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+

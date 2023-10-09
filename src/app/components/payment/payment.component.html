@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form [formGroup]="paymentForm" (ngSubmit)="handlePayment()" class="fw-bold">
+        <label >Details:</label>
+                <input type="text" formControlName="details" class="form-control my-2">
+                <div class="alert alert-danger" *ngIf="paymentForm.get('name')?.errors && paymentForm.get('name')?.touched">
+                  <p *ngIf="paymentForm.get('name')?.hasError('required')">Name is Required</p>
+
+                </div>
+                <label for="">Phone:</label>
+                <input type="text" formControlName="phone" class="form-control my-2">
+                <div class="alert alert-danger" *ngIf="paymentForm.get('name')?.errors && paymentForm.get('name')?.touched">
+                  <p *ngIf="paymentForm.get('name')?.hasError('required')">Name is Required</p>
+
+                </div>
+                <label for="">City:</label>
+                <input type="text" formControlName="city" class="form-control my-2">
+                <div class="alert alert-danger" *ngIf="paymentForm.get('name')?.errors && paymentForm.get('name')?.touched">
+                  <p *ngIf="paymentForm.get('name')?.hasError('required')">Name is Required</p>
+
+                </div>
+                <button [disabled]="paymentForm.invalid" class="btn bg-main text-white my-3 "><span *ngIf="!isLoading"> CheckOut </span> <span *ngIf="isLoading" class="ld ld-ring ld-spin running px-3 text-center"></span></button>
+
+      </form>
+    </div>
+  </div>
+</div>

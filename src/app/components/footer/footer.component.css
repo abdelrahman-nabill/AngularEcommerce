@@ -1,0 +1,13 @@
+.footer-logo{
+  width: 40px;
+  }
+  .footer-logoAmazon{
+  width: 80px;
+  }
+  .play-logo{
+    width: 20px;
+  }
+  .footer-border{
+  border-top: 1px solid rgb(204, 197, 197);
+  border-bottom: 1px solid rgb(204, 197, 197);
+  }

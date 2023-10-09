@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="special-font">Shop Popular Category</h2>
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let slide of slider">
+      <ng-template carouselSlide >
+        <img [src]="slide.image" class="small" >
+        <h6 class="text-center fw-bold special-font text-main">{{slide.name}}</h6>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+</div>
